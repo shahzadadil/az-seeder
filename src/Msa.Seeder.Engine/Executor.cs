@@ -2,7 +2,7 @@ namespace Msa.Seeder.Engine
 {
     using System;
     using System.Collections.Generic;
-    using Msa.Seeder.Azure.Steps;
+    using Msa.Seeder.Core;
 
     public class Executor
     {
@@ -13,16 +13,18 @@ namespace Msa.Seeder.Engine
             this._Steps = new List<Step<StepConfig>>();
         }
 
-        public Step<StepConfig> AddStep(Step<StepConfig> stepToAdd)
+        public Step<StepConfig> AddStep<TStep>(String stepName)        
         {
-            if (stepToAdd == null)
+            if (String.IsNullOrWhiteSpace(stepName))
             {
-                throw new ArgumentNullException(nameof(stepToAdd));
+                throw new ArgumentNullException(nameof(stepName));
             }
 
-            _Steps.Add(stepToAdd);
+            var step = (Step<StepConfig>)Activator.CreateInstance(typeof(TStep));
+            step.Create(stepName, this._Steps.Count + 1);
+            _Steps.Add(step);
 
-            return stepToAdd;
+            return step;
         }
 
         public void Execute()

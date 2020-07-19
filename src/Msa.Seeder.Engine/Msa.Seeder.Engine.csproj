@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\Msa.Seeder.Azure.Steps\Msa.Seeder.Azure.Steps.csproj" />
+    <ProjectReference Include="..\Msa.Seeder.Core\Msa.Seeder.Core.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

@@ -1,12 +1,20 @@
-﻿using System;
-
-namespace Msa.Seeder.ConsoleApp
+﻿namespace Msa.Seeder.ConsoleApp
 {
-    class Program
+    using Msa.Seeder.Steps.Azure.ServiceBus;
+    using Msa.Seeder.Engine;
+
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var executor = new Executor();
+
+            executor
+                .AddStep<PublishToTopicStep>("Publish messages")
+                .WithConfig(new PublishToTopicConfig(null, null, null));
+
+            executor.Execute();
+
         }
     }
 }

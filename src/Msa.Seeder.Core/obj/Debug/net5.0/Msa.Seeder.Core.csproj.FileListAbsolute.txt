@@ -1,0 +1,9 @@
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Core\bin\Debug\net5.0\Msa.Seeder.Core.deps.json
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Core\bin\Debug\net5.0\Msa.Seeder.Core.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Core\bin\Debug\net5.0\Msa.Seeder.Core.pdb
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Core\obj\Debug\net5.0\Msa.Seeder.Core.csprojAssemblyReference.cache
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Core\obj\Debug\net5.0\Msa.Seeder.Core.AssemblyInfoInputs.cache
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Core\obj\Debug\net5.0\Msa.Seeder.Core.AssemblyInfo.cs
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Core\obj\Debug\net5.0\Msa.Seeder.Core.csproj.CoreCompileInputs.cache
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Core\obj\Debug\net5.0\Msa.Seeder.Core.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Core\obj\Debug\net5.0\Msa.Seeder.Core.pdb

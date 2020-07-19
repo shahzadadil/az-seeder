@@ -1,5 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\Msa.Seeder.Engine\Msa.Seeder.Engine.csproj" />
+    <ProjectReference Include="..\Msa.Seeder.Steps.Azure\Msa.Seeder.Steps.Azure.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>

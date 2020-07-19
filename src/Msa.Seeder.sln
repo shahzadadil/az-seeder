@@ -5,9 +5,13 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Msa.Seeder.Azure.Interface", "Msa.Seeder.Azure.Interface\Msa.Seeder.Azure.Interface.csproj", "{FEAA863C-46B5-4EDB-A854-862B0C1A862E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Msa.Seeder.Azure.Steps", "Msa.Seeder.Azure.Steps\Msa.Seeder.Azure.Steps.csproj", "{341D112B-BCBB-46F7-836C-4C2737594757}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Msa.Seeder.Engine", "Msa.Seeder.Engine\Msa.Seeder.Engine.csproj", "{763D1B09-ACB0-4875-8764-789393F7E800}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Msa.Seeder.Engine", "Msa.Seeder.Engine\Msa.Seeder.Engine.csproj", "{763D1B09-ACB0-4875-8764-789393F7E800}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Msa.Seeder.ConsoleApp", "Msa.Seeder.ConsoleApp\Msa.Seeder.ConsoleApp.csproj", "{3D3F838C-DF81-40E4-A937-0EFB4E5338C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Msa.Seeder.Core", "Msa.Seeder.Core\Msa.Seeder.Core.csproj", "{063A7293-D80C-43CC-9BDB-5628F70518ED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Msa.Seeder.Steps.Azure", "Msa.Seeder.Steps.Azure\Msa.Seeder.Steps.Azure.csproj", "{80527E82-EEBB-439E-BE5D-9B71D9494A2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,18 +35,6 @@ Global
 		{FEAA863C-46B5-4EDB-A854-862B0C1A862E}.Release|x64.Build.0 = Release|Any CPU
 		{FEAA863C-46B5-4EDB-A854-862B0C1A862E}.Release|x86.ActiveCfg = Release|Any CPU
 		{FEAA863C-46B5-4EDB-A854-862B0C1A862E}.Release|x86.Build.0 = Release|Any CPU
-		{341D112B-BCBB-46F7-836C-4C2737594757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{341D112B-BCBB-46F7-836C-4C2737594757}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{341D112B-BCBB-46F7-836C-4C2737594757}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{341D112B-BCBB-46F7-836C-4C2737594757}.Debug|x64.Build.0 = Debug|Any CPU
-		{341D112B-BCBB-46F7-836C-4C2737594757}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{341D112B-BCBB-46F7-836C-4C2737594757}.Debug|x86.Build.0 = Debug|Any CPU
-		{341D112B-BCBB-46F7-836C-4C2737594757}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{341D112B-BCBB-46F7-836C-4C2737594757}.Release|Any CPU.Build.0 = Release|Any CPU
-		{341D112B-BCBB-46F7-836C-4C2737594757}.Release|x64.ActiveCfg = Release|Any CPU
-		{341D112B-BCBB-46F7-836C-4C2737594757}.Release|x64.Build.0 = Release|Any CPU
-		{341D112B-BCBB-46F7-836C-4C2737594757}.Release|x86.ActiveCfg = Release|Any CPU
-		{341D112B-BCBB-46F7-836C-4C2737594757}.Release|x86.Build.0 = Release|Any CPU
 		{763D1B09-ACB0-4875-8764-789393F7E800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{763D1B09-ACB0-4875-8764-789393F7E800}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{763D1B09-ACB0-4875-8764-789393F7E800}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -55,6 +47,42 @@ Global
 		{763D1B09-ACB0-4875-8764-789393F7E800}.Release|x64.Build.0 = Release|Any CPU
 		{763D1B09-ACB0-4875-8764-789393F7E800}.Release|x86.ActiveCfg = Release|Any CPU
 		{763D1B09-ACB0-4875-8764-789393F7E800}.Release|x86.Build.0 = Release|Any CPU
+		{3D3F838C-DF81-40E4-A937-0EFB4E5338C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D3F838C-DF81-40E4-A937-0EFB4E5338C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D3F838C-DF81-40E4-A937-0EFB4E5338C1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3D3F838C-DF81-40E4-A937-0EFB4E5338C1}.Debug|x64.Build.0 = Debug|Any CPU
+		{3D3F838C-DF81-40E4-A937-0EFB4E5338C1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3D3F838C-DF81-40E4-A937-0EFB4E5338C1}.Debug|x86.Build.0 = Debug|Any CPU
+		{3D3F838C-DF81-40E4-A937-0EFB4E5338C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D3F838C-DF81-40E4-A937-0EFB4E5338C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D3F838C-DF81-40E4-A937-0EFB4E5338C1}.Release|x64.ActiveCfg = Release|Any CPU
+		{3D3F838C-DF81-40E4-A937-0EFB4E5338C1}.Release|x64.Build.0 = Release|Any CPU
+		{3D3F838C-DF81-40E4-A937-0EFB4E5338C1}.Release|x86.ActiveCfg = Release|Any CPU
+		{3D3F838C-DF81-40E4-A937-0EFB4E5338C1}.Release|x86.Build.0 = Release|Any CPU
+		{063A7293-D80C-43CC-9BDB-5628F70518ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{063A7293-D80C-43CC-9BDB-5628F70518ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{063A7293-D80C-43CC-9BDB-5628F70518ED}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{063A7293-D80C-43CC-9BDB-5628F70518ED}.Debug|x64.Build.0 = Debug|Any CPU
+		{063A7293-D80C-43CC-9BDB-5628F70518ED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{063A7293-D80C-43CC-9BDB-5628F70518ED}.Debug|x86.Build.0 = Debug|Any CPU
+		{063A7293-D80C-43CC-9BDB-5628F70518ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{063A7293-D80C-43CC-9BDB-5628F70518ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{063A7293-D80C-43CC-9BDB-5628F70518ED}.Release|x64.ActiveCfg = Release|Any CPU
+		{063A7293-D80C-43CC-9BDB-5628F70518ED}.Release|x64.Build.0 = Release|Any CPU
+		{063A7293-D80C-43CC-9BDB-5628F70518ED}.Release|x86.ActiveCfg = Release|Any CPU
+		{063A7293-D80C-43CC-9BDB-5628F70518ED}.Release|x86.Build.0 = Release|Any CPU
+		{80527E82-EEBB-439E-BE5D-9B71D9494A2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80527E82-EEBB-439E-BE5D-9B71D9494A2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80527E82-EEBB-439E-BE5D-9B71D9494A2A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{80527E82-EEBB-439E-BE5D-9B71D9494A2A}.Debug|x64.Build.0 = Debug|Any CPU
+		{80527E82-EEBB-439E-BE5D-9B71D9494A2A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{80527E82-EEBB-439E-BE5D-9B71D9494A2A}.Debug|x86.Build.0 = Debug|Any CPU
+		{80527E82-EEBB-439E-BE5D-9B71D9494A2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80527E82-EEBB-439E-BE5D-9B71D9494A2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80527E82-EEBB-439E-BE5D-9B71D9494A2A}.Release|x64.ActiveCfg = Release|Any CPU
+		{80527E82-EEBB-439E-BE5D-9B71D9494A2A}.Release|x64.Build.0 = Release|Any CPU
+		{80527E82-EEBB-439E-BE5D-9B71D9494A2A}.Release|x86.ActiveCfg = Release|Any CPU
+		{80527E82-EEBB-439E-BE5D-9B71D9494A2A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

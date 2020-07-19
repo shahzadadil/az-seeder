@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Msa.Seeder.Core/1.0.0": {
+        "runtime": {
+          "Msa.Seeder.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Msa.Seeder.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
