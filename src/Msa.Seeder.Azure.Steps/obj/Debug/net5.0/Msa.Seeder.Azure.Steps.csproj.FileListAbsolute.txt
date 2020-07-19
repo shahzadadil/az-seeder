@@ -1,0 +1,12 @@
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Steps\bin\Debug\net5.0\Msa.Seeder.Azure.Steps.deps.json
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Steps\bin\Debug\net5.0\Msa.Seeder.Azure.Steps.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Steps\bin\Debug\net5.0\Msa.Seeder.Azure.Steps.pdb
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Steps\bin\Debug\net5.0\Msa.Seeder.Azure.Interface.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Steps\bin\Debug\net5.0\Msa.Seeder.Azure.Interface.pdb
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Steps\obj\Debug\net5.0\Msa.Seeder.Azure.Steps.csprojAssemblyReference.cache
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Steps\obj\Debug\net5.0\Msa.Seeder.Azure.Steps.AssemblyInfoInputs.cache
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Steps\obj\Debug\net5.0\Msa.Seeder.Azure.Steps.AssemblyInfo.cs
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Steps\obj\Debug\net5.0\Msa.Seeder.Azure.Steps.csproj.CoreCompileInputs.cache
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Steps\obj\Debug\net5.0\Msa.Seeder.Azure.Steps.csproj.CopyComplete
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Steps\obj\Debug\net5.0\Msa.Seeder.Azure.Steps.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Steps\obj\Debug\net5.0\Msa.Seeder.Azure.Steps.pdb
