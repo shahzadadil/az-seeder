@@ -10,7 +10,7 @@
             var executor = new Executor();
 
             executor
-                .AddStep<PublishToTopicStep>("Publish messages")
+                .AddStep<PublishToTopicStep, PublishToTopicConfig>("Publish messages")
                 .WithConfig(new PublishToTopicConfig(null, null, null));
 
             executor.Execute();

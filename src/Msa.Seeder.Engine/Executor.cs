@@ -13,16 +13,18 @@ namespace Msa.Seeder.Engine
             this._Steps = new List<Step<StepConfig>>();
         }
 
-        public Step<StepConfig> AddStep<TStep>(String stepName)        
+        public TStep AddStep<TStep, TConfig>(String stepName) 
+            where TStep: Step<TConfig>
+            where TConfig: StepConfig
         {
             if (String.IsNullOrWhiteSpace(stepName))
             {
                 throw new ArgumentNullException(nameof(stepName));
             }
 
-            var step = (Step<StepConfig>)Activator.CreateInstance(typeof(TStep));
+            var step = (TStep)Activator.CreateInstance(typeof(TStep));
             step.Create(stepName, this._Steps.Count + 1);
-            _Steps.Add(step);
+            _Steps.Add(step as Step<StepConfig>);
 
             return step;
         }
