@@ -46,6 +46,10 @@
             "Microsoft.Azure.ServiceBus": {
               "target": "Package",
               "version": "[4.1.3, )"
+            },
+            "Microsoft.Azure.Storage.Common": {
+              "target": "Package",
+              "version": "[*, )"
             }
           },
           "imports": [

@@ -10,7 +10,7 @@ namespace Msa.Seeder.Steps.Azure.ServiceBus
         public PublishToTopicConfig(
             String connectionString,
             String topicName,
-            IEnumerable<String> messageContents)
+            IEnumerable<String> messageContents) : base(null)
         {
             if (String.IsNullOrWhiteSpace(connectionString))
             {

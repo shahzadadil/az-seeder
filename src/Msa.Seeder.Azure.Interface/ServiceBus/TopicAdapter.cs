@@ -1,4 +1,4 @@
-namespace Msa.Seeder.Azure.Interface
+namespace Msa.Seeder.Azure.Interface.ServiceBus
 {
     using System;
     using System.Collections.Generic;

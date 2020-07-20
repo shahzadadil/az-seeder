@@ -2,7 +2,7 @@ namespace Msa.Seeder.Steps.Azure.ServiceBus
 {
     using System;
     using System.Threading.Tasks;
-    using Msa.Seeder.Azure.Interface;
+    using Msa.Seeder.Azure.Interface.ServiceBus;
     using Msa.Seeder.Core;
 
     public class PublishToTopicStep : Step<PublishToTopicConfig>
