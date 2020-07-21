@@ -1,13 +1,12 @@
 namespace Msa.Seeder.Steps.Azure.Storage
 {
     using System;
-    using System.Linq;
     using System.Net.Http;
     using System.Net.Http.Headers;
     using System.Text;
     using System.Threading.Tasks;
-    using Msa.Seeder.Azure.Interface.Storage;
     using Msa.Seeder.Core;
+    using Msa.Seeder.Azure.Interface.Storage;
 
     public class CheckRowInTableStep : Step<CheckRowInTableConfig>
     {

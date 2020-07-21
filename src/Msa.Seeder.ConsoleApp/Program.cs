@@ -2,6 +2,7 @@
 {
     using Msa.Seeder.Steps.Azure.ServiceBus;
     using Msa.Seeder.Engine;
+    using Msa.Seeder.Steps.Azure.Storage;
 
     public class Program
     {
@@ -13,8 +14,11 @@
                 .AddStep<PublishToTopicStep, PublishToTopicConfig>("Publish messages")
                 .WithConfig(new PublishToTopicConfig(null, null, null));
 
-            executor.Execute();
+            executor
+                .AddStep<CheckRowInTableStep, CheckRowInTableConfig>("Check record in Table Storage")
+                .WithConfig(new CheckRowInTableConfig(null, null, null, null));
 
+            executor.Execute();
         }
     }
 }
