@@ -52,7 +52,7 @@ namespace Msa.Seeder.Azure.Interface.Storage
                     return null;
                 } 
 
-                return System.Text.Encoding.UTF8.GetString(account.Credentials.ExportKey());
+                return account.Credentials.ExportBase64EncodedKey();
             }
         }
     }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rx3T126B6lKpMFel7MiVUSg4pUk3Wa7fpgeGdHiFcM450qNsYBaIT+PxqwMZdhkHoEiEoemomHaxFYEjblOcAg==",
+  "dgSpecHash": "q8OV/Loe8S43q8MiMbuntsZyKjrz1q5b8+M3co3iyq8kNL+zDULG880aSIFyPqTXAFCPoo4uhlUVje6ulNrJQQ==",
   "success": true,
   "projectFilePath": "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Seeder.Azure.Interface\\Msa.Seeder.Azure.Interface.csproj",
   "expectedPackageFiles": [

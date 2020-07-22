@@ -2,9 +2,22 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v5.0": {
+      "Msa.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Msa.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Msa.Core.dll": {}
+        }
+      },
       "Msa.Seeder.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Msa.Core": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Msa.Seeder.Core.dll": {}
         },
@@ -15,6 +28,11 @@
     }
   },
   "libraries": {
+    "Msa.Core/1.0.0": {
+      "type": "project",
+      "path": "../Msa.Core/Msa.Core.csproj",
+      "msbuildProject": "../Msa.Core/Msa.Core.csproj"
+    },
     "Msa.Seeder.Core/1.0.0": {
       "type": "project",
       "path": "../Msa.Seeder.Core/Msa.Seeder.Core.csproj",
@@ -23,6 +41,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v5.0": [
+      "Msa.Core >= 1.0.0",
       "Msa.Seeder.Core >= 1.0.0"
     ]
   },
@@ -59,6 +78,9 @@
       "frameworks": {
         "net5.0": {
           "projectReferences": {
+            "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Core\\Msa.Core.csproj": {
+              "projectPath": "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Core\\Msa.Core.csproj"
+            },
             "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Seeder.Core\\Msa.Seeder.Core.csproj": {
               "projectPath": "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Seeder.Core\\Msa.Seeder.Core.csproj"
             }

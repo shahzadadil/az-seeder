@@ -30,3 +30,14 @@ D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.ConsoleApp\obj\Debug\net5.0\Ms
 D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.ConsoleApp\obj\Debug\net5.0\Msa.Seeder.ConsoleApp.dll
 D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.ConsoleApp\obj\Debug\net5.0\Msa.Seeder.ConsoleApp.pdb
 D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.ConsoleApp\obj\Debug\net5.0\Msa.Seeder.ConsoleApp.genruntimeconfig.cache
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.ConsoleApp\bin\Debug\net5.0\Microsoft.Azure.KeyVault.Core.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.ConsoleApp\bin\Debug\net5.0\Microsoft.Azure.Storage.Common.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.ConsoleApp\bin\Debug\net5.0\Microsoft.Azure.Cosmos.Table.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.ConsoleApp\bin\Debug\net5.0\Microsoft.Azure.DocumentDB.Core.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.ConsoleApp\bin\Debug\net5.0\Microsoft.OData.Core.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.ConsoleApp\bin\Debug\net5.0\Microsoft.OData.Edm.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.ConsoleApp\bin\Debug\net5.0\Microsoft.Spatial.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.ConsoleApp\bin\Debug\net5.0\runtimes\win7-x64\native\Cosmos.CRTCompat.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.ConsoleApp\bin\Debug\net5.0\runtimes\win7-x64\native\Microsoft.Azure.Documents.ServiceInterop.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.ConsoleApp\bin\Debug\net5.0\Msa.Core.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.ConsoleApp\bin\Debug\net5.0\Msa.Core.pdb

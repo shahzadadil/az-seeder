@@ -2,8 +2,15 @@ namespace Msa.Seeder.Core
 {
     using System;
     using System.Threading.Tasks;
-    using Msa.Seeder.Core;
-    public abstract class Step<TConfig> where TConfig: StepConfig
+
+    public interface IStep
+    {
+        Task Execute();
+        Int32 Order { get; }
+        String StepName { get; }
+    }
+
+    public abstract class Step<TConfig> : IStep where TConfig : StepConfig
     {
         protected TConfig _StepConfig;
         public Int32 Order { get; private set; }

@@ -38,11 +38,32 @@ namespace Msa.Seeder.Azure.Interface.ServiceBus
                 return;
             }
 
+            // var messageCount = messageContents.Count();
+
+            // if (messageCount == 1)
+            // {
+            //     await SendMessage(messageContents.ElementAt(0));
+            //     return;
+            // } 
+
+            // var lastMessage = messageContents.Last();
+            // messageContents.ToList().RemoveAt(messageCount - 1);
+
+            // Parallel.ForEach(
+            //     messageContents,
+            //     (msg) => SendMessage())
+
             foreach (var messageContent in messageContents)
             {
                 var topicMessage = new Message(Encoding.UTF8.GetBytes(messageContent));
-                await this._TopicClient.SendAsync(topicMessage);
+                this._TopicClient.SendAsync(topicMessage);
             }
+        }
+
+        private async Task SendMessage(String messageContent)
+        {
+            var topicMessage = new Message(Encoding.UTF8.GetBytes(messageContent));
+            await this._TopicClient.SendAsync(topicMessage);
         }
 
         public void Dispose()

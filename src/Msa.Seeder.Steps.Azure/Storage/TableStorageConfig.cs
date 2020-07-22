@@ -2,10 +2,13 @@ namespace Msa.Seeder.Steps.Azure.Storage
 {
     using System;
     using Msa.Seeder.Core;
+    using Msa.Seeder.Core.Configs;
 
     public class TableStorageConfig : StepConfig
     {
-        public TableStorageConfig(String connectionString) : base(null)
+        public TableStorageConfig(
+            String connectionString,
+            RetryConfig retryConfig = null) : base(retryConfig)
         {
             if (String.IsNullOrWhiteSpace(connectionString))
             {

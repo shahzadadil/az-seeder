@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v5.0": {}
+    ".NETCoreApp,Version=v5.0": {
+      "Msa.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Msa.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Msa.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Msa.Core/1.0.0": {
+      "type": "project",
+      "path": "../Msa.Core/Msa.Core.csproj",
+      "msbuildProject": "../Msa.Core/Msa.Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v5.0": []
+    ".NETCoreApp,Version=v5.0": [
+      "Msa.Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Shahzad\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       },
       "frameworks": {
         "net5.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Core\\Msa.Core.csproj": {
+              "projectPath": "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Core\\Msa.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -10,3 +10,5 @@ D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Engine\bin\Debug\net5.0\Msa.Se
 D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Engine\obj\Debug\net5.0\Msa.Seeder.Engine.csproj.CopyComplete
 D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Engine\obj\Debug\net5.0\Msa.Seeder.Engine.dll
 D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Engine\obj\Debug\net5.0\Msa.Seeder.Engine.pdb
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Engine\bin\Debug\net5.0\Msa.Core.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Engine\bin\Debug\net5.0\Msa.Core.pdb

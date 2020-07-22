@@ -49,7 +49,7 @@
             },
             "Microsoft.Azure.Storage.Common": {
               "target": "Package",
-              "version": "[*, )"
+              "version": "[11.1.7, )"
             }
           },
           "imports": [

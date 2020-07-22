@@ -7,6 +7,9 @@ namespace Msa.Seeder.Steps.Azure.Storage
     using System.Threading.Tasks;
     using Msa.Seeder.Core;
     using Msa.Seeder.Azure.Interface.Storage;
+    using System.Globalization;
+    using Microsoft.Azure.Cosmos.Table;
+    using System.Threading;
 
     public class CheckRowInTableStep : Step<CheckRowInTableConfig>
     {
@@ -23,51 +26,49 @@ namespace Msa.Seeder.Steps.Azure.Storage
             }
 
             var queryBuilder = new StringBuilder(storageAccountUri.AbsoluteUri);
-            queryBuilder.Append($"/{this._StepConfig.TableName}");
+            queryBuilder.Append($"{this._StepConfig.TableName}");
+
+            var baseUrl = queryBuilder.ToString();
 
             if (!String.IsNullOrWhiteSpace(this._StepConfig.PartitionKey) && !String.IsNullOrWhiteSpace(this._StepConfig.RowKey))
             {
-                queryBuilder.Append($"(PartitionKey='{this._StepConfig.PartitionKey}',RowKey='{this._StepConfig.RowKey}')?");
+                queryBuilder.Append($"(PartitionKey='{this._StepConfig.PartitionKey}',RowKey='{this._StepConfig.RowKey}')");
             }
             else
             {
-                queryBuilder.Append("()?");
+                queryBuilder.Append("()");
             }
 
-            // TODO: filter implementation would be the next step
+            var retryConfig = this._StepConfig.RetryConfig;
 
-            // if (this._StepConfig.Filters.Any())
-            // {
-            //     queryBuilder.Append("$filter=");
-            // }
+            var storageAccount = new CloudStorageAccount(
+                new StorageCredentials(storageRepository.AccountName, storageRepository.SharedKey),
+                true);
+            
+            var tableClient = storageAccount.CreateCloudTableClient();
+            var table = tableClient.GetTableReference(this._StepConfig.TableName);
 
-            // foreach (var filter in this._StepConfig.Filters)
-            // {
-            //     queryBuilder.Append()
-            // }
-
-            using (var tableQueryClient = new HttpClient())
+            var tableQueryOperation = TableOperation.Retrieve(
+                this._StepConfig.PartitionKey,
+                this._StepConfig.RowKey);
+            
+            do
             {
-                var authHeaderParam = $"{storageRepository.AccountName}:{storageRepository.SharedKey}";
-                tableQueryClient.DefaultRequestHeaders.Date = DateTime.UtcNow;
-                tableQueryClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("SharedKey", authHeaderParam);
+                this._NumberOfRetries++;
 
-                var retryConfig = this._StepConfig.RetryConfig;
+                var entity = await table.ExecuteAsync(tableQueryOperation);
 
-                do
+                if (entity.Result != null)
                 {
-                    this._NumberOfRetries++;
+                    return;
+                }
 
-                    var responseText = await tableQueryClient.GetStringAsync(queryBuilder.ToString());
+                Thread.Sleep(this._StepConfig.RetryConfig.RetryIntervalSecs * 1000);
 
-                    if (!String.IsNullOrWhiteSpace(responseText))
-                    {
-                        return;
-                    }
+            } while (retryConfig.ShouldRetry && retryConfig.MaxRetries > this._NumberOfRetries);
 
-                } while (retryConfig.ShouldRetry && retryConfig.MaxRetries > this._NumberOfRetries);
-
-            }
+            // If retries have been exhausted, it is not successful
+            throw new TimeoutException("Record not found after timeout");
         }
     }
 }

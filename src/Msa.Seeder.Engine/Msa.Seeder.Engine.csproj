@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Msa.Seeder.Core\Msa.Seeder.Core.csproj" />
+    <ProjectReference Include="..\Msa.Core\Msa.Core.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

@@ -2,15 +2,19 @@ namespace Msa.Seeder.Engine
 {
     using System;
     using System.Collections.Generic;
+    using System.Threading.Tasks;
     using Msa.Seeder.Core;
+    using Msa.Seeder.Core.Metrics;
+    using Msa.Core;
+    using Msa.Core.Infra;
 
     public class Executor
     {
-        private ICollection<Step<StepConfig>> _Steps;
+        private ICollection<IStep> _Steps;
 
         public Executor()
         {
-            this._Steps = new List<Step<StepConfig>>();
+            this._Steps = new List<IStep>();
         }
 
         public TStep AddStep<TStep, TConfig>(String stepName) 
@@ -24,24 +28,41 @@ namespace Msa.Seeder.Engine
 
             var step = (TStep)Activator.CreateInstance(typeof(TStep));
             step.Create(stepName, this._Steps.Count + 1);
-            _Steps.Add(step as Step<StepConfig>);
+            _Steps.Add(step);
 
             return step;
         }
 
-        public void Execute()
+        public async Task<ExecutionMetric> Execute()
         {
+            var execution = new ExecutionMetric();
+            
             foreach (var step in this._Steps)
             {
+                var start = DateTime.UtcNow;
+
                 try
-                {
-                    step.Execute();
+                {                    
+                    await step.Execute();
+
+                    execution.Add(
+                        new StepMetric(
+                            step,
+                            new DateRange(start, DateTime.UtcNow)));
                 }
                 catch (Exception ex)
                 {
-                    throw new InvalidOperationException($"Error executing step. {step}", ex);
+                     execution.Add(
+                        new StepMetric(
+                            step,
+                            new DateRange(start, DateTime.UtcNow),
+                            Outcome.Failure("Error executing step", ex)));
+
+                    return execution.Failure();
                 }
             }
+
+            return execution.Success();
         }
     }
 }

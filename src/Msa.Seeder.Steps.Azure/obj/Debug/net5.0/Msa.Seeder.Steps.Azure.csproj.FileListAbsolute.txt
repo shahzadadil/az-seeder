@@ -12,3 +12,5 @@ D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Steps.Azure\bin\Debug\net5.0\M
 D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Steps.Azure\obj\Debug\net5.0\Msa.Seeder.Steps.Azure.csproj.CopyComplete
 D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Steps.Azure\obj\Debug\net5.0\Msa.Seeder.Steps.Azure.dll
 D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Steps.Azure\obj\Debug\net5.0\Msa.Seeder.Steps.Azure.pdb
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Steps.Azure\bin\Debug\net5.0\Msa.Core.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Steps.Azure\bin\Debug\net5.0\Msa.Core.pdb

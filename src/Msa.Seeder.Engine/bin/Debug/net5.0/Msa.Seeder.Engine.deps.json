@@ -8,13 +8,22 @@
     ".NETCoreApp,Version=v5.0": {
       "Msa.Seeder.Engine/1.0.0": {
         "dependencies": {
+          "Msa.Core": "1.0.0",
           "Msa.Seeder.Core": "1.0.0"
         },
         "runtime": {
           "Msa.Seeder.Engine.dll": {}
         }
       },
+      "Msa.Core/1.0.0": {
+        "runtime": {
+          "Msa.Core.dll": {}
+        }
+      },
       "Msa.Seeder.Core/1.0.0": {
+        "dependencies": {
+          "Msa.Core": "1.0.0"
+        },
         "runtime": {
           "Msa.Seeder.Core.dll": {}
         }
@@ -23,6 +32,11 @@
   },
   "libraries": {
     "Msa.Seeder.Engine/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Msa.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
