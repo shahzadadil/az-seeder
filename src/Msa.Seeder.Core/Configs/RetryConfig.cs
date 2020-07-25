@@ -5,12 +5,12 @@ namespace Msa.Seeder.Core.Configs
     public class RetryConfig
     {
         public RetryConfig(
-            Int32 retryIntervalSeconds,
+            Int32 retryInterval,
             Int32 maxRetries)
         {
-            if (retryIntervalSeconds <= 0)
+            if (retryInterval <= 0)
             {
-                throw new ArgumentOutOfRangeException(nameof(retryIntervalSeconds));
+                throw new ArgumentOutOfRangeException(nameof(retryInterval));
             }    
 
             if (maxRetries < 0)
@@ -20,11 +20,11 @@ namespace Msa.Seeder.Core.Configs
 
             this.ShouldRetry = maxRetries > 0;
             this.MaxRetries = maxRetries;
-            this.RetryIntervalSecs = retryIntervalSeconds;
+            this.RetryInterval = retryInterval;
         }
 
         public Boolean ShouldRetry { get; private set;}
-        public Int32 RetryIntervalSecs { get; private set; }
+        public Int32 RetryInterval { get; private set; }
         public Int32 MaxRetries { get; private set; }
     }
 }

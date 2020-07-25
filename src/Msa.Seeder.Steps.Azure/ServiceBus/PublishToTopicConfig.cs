@@ -4,13 +4,14 @@ namespace Msa.Seeder.Steps.Azure.ServiceBus
     using System.Collections.Generic;
     using System.Linq;
     using Msa.Seeder.Core;
+    using Msa.Seeder.Core.Configs;
 
     public class PublishToTopicConfig : StepConfig
     {
         public PublishToTopicConfig(
             String connectionString,
             String topicName,
-            IEnumerable<String> messageContents) : base(null)
+            IEnumerable<DelayedContent<String>> messageContents) : base(null)
         {
             if (String.IsNullOrWhiteSpace(connectionString))
             {
@@ -34,6 +35,6 @@ namespace Msa.Seeder.Steps.Azure.ServiceBus
 
         public String ConnectionString { get; private set; }
         public String TopicName { get; private set; }
-        public IEnumerable<String> MessageContents { get; private set; }
+        public IEnumerable<DelayedContent<String>> MessageContents { get; private set; }
     }
 }

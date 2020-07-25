@@ -35,6 +35,11 @@ namespace Msa.Core.Infra
 
         public override String ToString()
         {
+            if (this.Success)
+            {
+                return this.StatusText;
+            }
+            
             return $"{this.StatusText}: {this.Message}";
         }
     }

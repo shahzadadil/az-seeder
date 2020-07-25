@@ -1,9 +1,14 @@
-D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Interface\bin\Debug\net5.0\Msa.Seeder.Azure.Interface.deps.json
-D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Interface\bin\Debug\net5.0\Msa.Seeder.Azure.Interface.dll
-D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Interface\bin\Debug\net5.0\Msa.Seeder.Azure.Interface.pdb
 D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Interface\obj\Debug\net5.0\Msa.Seeder.Azure.Interface.csprojAssemblyReference.cache
 D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Interface\obj\Debug\net5.0\Msa.Seeder.Azure.Interface.AssemblyInfoInputs.cache
 D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Interface\obj\Debug\net5.0\Msa.Seeder.Azure.Interface.AssemblyInfo.cs
 D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Interface\obj\Debug\net5.0\Msa.Seeder.Azure.Interface.csproj.CoreCompileInputs.cache
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Interface\bin\Debug\net5.0\Msa.Seeder.Azure.Interface.deps.json
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Interface\bin\Debug\net5.0\Msa.Seeder.Azure.Interface.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Interface\bin\Debug\net5.0\Msa.Seeder.Azure.Interface.pdb
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Interface\bin\Debug\net5.0\Msa.Core.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Interface\bin\Debug\net5.0\Msa.Seeder.Core.dll
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Interface\bin\Debug\net5.0\Msa.Seeder.Core.pdb
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Interface\bin\Debug\net5.0\Msa.Core.pdb
+D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Interface\obj\Debug\net5.0\Msa.Seeder.Azure.Interface.csproj.CopyComplete
 D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Interface\obj\Debug\net5.0\Msa.Seeder.Azure.Interface.dll
 D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Azure.Interface\obj\Debug\net5.0\Msa.Seeder.Azure.Interface.pdb

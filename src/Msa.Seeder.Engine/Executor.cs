@@ -44,19 +44,23 @@ namespace Msa.Seeder.Engine
                 try
                 {                    
                     await step.Execute();
-
-                    execution.Add(
-                        new StepMetric(
+                    var stepMetric = new StepMetric(
                             step,
-                            new DateRange(start, DateTime.UtcNow)));
+                            new DateRange(start, DateTime.UtcNow));
+
+                    execution.Add(stepMetric);
+                    Console.WriteLine(stepMetric);
                 }
                 catch (Exception ex)
                 {
-                     execution.Add(
-                        new StepMetric(
+                    var stepMetric = new StepMetric(
                             step,
                             new DateRange(start, DateTime.UtcNow),
-                            Outcome.Failure("Error executing step", ex)));
+                            Outcome.Failure("Error executing step", ex));
+
+                    execution.Add(stepMetric);
+
+                    Console.WriteLine(stepMetric);
 
                     return execution.Failure();
                 }

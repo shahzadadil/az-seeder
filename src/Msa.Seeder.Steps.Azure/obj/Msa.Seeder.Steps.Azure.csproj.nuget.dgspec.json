@@ -88,7 +88,11 @@
         },
         "frameworks": {
           "net5.0": {
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Seeder.Core\\Msa.Seeder.Core.csproj": {
+                "projectPath": "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Seeder.Core\\Msa.Seeder.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

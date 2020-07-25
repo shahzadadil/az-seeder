@@ -63,7 +63,7 @@ namespace Msa.Seeder.Steps.Azure.Storage
                     return;
                 }
 
-                Thread.Sleep(this._StepConfig.RetryConfig.RetryIntervalSecs * 1000);
+                Thread.Sleep(this._StepConfig.RetryConfig.RetryInterval);
 
             } while (retryConfig.ShouldRetry && retryConfig.MaxRetries > this._NumberOfRetries);
 

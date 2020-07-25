@@ -4,8 +4,10 @@ namespace Msa.Seeder.Azure.Interface.ServiceBus
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
+    using System.Threading;
     using System.Threading.Tasks;
     using Microsoft.Azure.ServiceBus;
+    using Msa.Seeder.Core.Configs;
 
     public class TopicAdapter : IDisposable
     {
@@ -26,7 +28,7 @@ namespace Msa.Seeder.Azure.Interface.ServiceBus
             this._TopicClient = new TopicClient(connectionString, topicName);
         }        
 
-        public async Task SendAtOnce(IEnumerable<String> messageContents)
+        public async Task SendAtOnce(IEnumerable<DelayedContent<String>> messageContents)
         {
             if (messageContents == null)
             {
@@ -55,7 +57,20 @@ namespace Msa.Seeder.Azure.Interface.ServiceBus
 
             foreach (var messageContent in messageContents)
             {
-                var topicMessage = new Message(Encoding.UTF8.GetBytes(messageContent));
+                if (String.IsNullOrWhiteSpace(messageContent.Content))
+                {
+                    throw new ArgumentException(nameof(messageContent.Content));
+                }
+
+                // Messages are sent synchronously by design, as we do not want to hold the processing
+                var topicMessage = new Message(Encoding.UTF8.GetBytes(messageContent.Content));
+
+                if (messageContent.Delay.TotalMilliseconds > 0)
+                {
+                    var delay = Convert.ToInt32(Math.Floor(messageContent.Delay.TotalMilliseconds));
+                    Thread.Sleep(delay);
+                }
+
                 this._TopicClient.SendAsync(topicMessage);
             }
         }

@@ -9,7 +9,8 @@
       "Msa.Seeder.Azure.Interface/1.0.0": {
         "dependencies": {
           "Microsoft.Azure.ServiceBus": "4.1.3",
-          "Microsoft.Azure.Storage.Common": "11.1.7"
+          "Microsoft.Azure.Storage.Common": "11.1.7",
+          "Msa.Seeder.Core": "1.0.0"
         },
         "runtime": {
           "Msa.Seeder.Azure.Interface.dll": {}
@@ -971,6 +972,19 @@
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
         }
+      },
+      "Msa.Core/1.0.0": {
+        "runtime": {
+          "Msa.Core.dll": {}
+        }
+      },
+      "Msa.Seeder.Core/1.0.0": {
+        "dependencies": {
+          "Msa.Core": "1.0.0"
+        },
+        "runtime": {
+          "Msa.Seeder.Core.dll": {}
+        }
       }
     }
   },
@@ -1665,6 +1679,16 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "Msa.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Msa.Seeder.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
