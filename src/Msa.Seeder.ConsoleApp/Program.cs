@@ -18,16 +18,18 @@
             var executor = new Executor();
             var assetOpsEvents = new List<AssetOperationalEvent>();
             var messages = new List<DelayedContent<String>>();
+            var baseDate = new DateTime(2020, 01, 01, 0, 0, 0, DateTimeKind.Utc);
+            var random = new Random();
 
-            for (int i = 0; i < 1; i++)
+            for (int i = 0; i < 220; i++)
             {
                 var assetOpsEvent = new AssetOperationalEvent
                 {
-                    AssetId = 111,
+                    AssetId = 10421,
                     Id = Guid.NewGuid(),
-                    EventDateTime = DateTime.UtcNow,
-                    EventData = "TestData",
-                    IdentityId = 1,
+                    EventDateTime = baseDate.AddDays(i),
+                    EventData = "TestData TestData TestData TestData TestData TestData TestData TestData TestData TestData",
+                    IdentityId = random.Next(1, 10000),
                     Origin = "TEST",
                     Status = AssetOperationalEventStatus.InProgress
                 };
@@ -46,19 +48,19 @@
             executor
                 .AddStep<PublishToTopicStep, PublishToTopicConfig>("Publish messages")
                 .WithConfig(new PublishToTopicConfig(
-                    "", 
+                    "",
                     "",
                     messages));
 
-            executor
-                .AddStep<CheckRowInTableStep, CheckRowInTableConfig>("Check record in Table Storage")
-                .WithConfig(new CheckRowInTableConfig(
-                    new TableStorageConfig(
-                        ""), 
-                    "",
-                    lastMessage.AssetId.ToString(), 
-                    rowKey,
-                    retryConfig: new RetryConfig(2000, 100)));
+            // executor
+            //     .AddStep<CheckRowInTableStep, CheckRowInTableConfig>("Check record in Table Storage")
+            //     .WithConfig(new CheckRowInTableConfig(
+            //         new TableStorageConfig(
+            //             ""), 
+            //         "",
+            //         lastMessage.AssetId.ToString(), 
+            //         rowKey,
+            //         retryConfig: new RetryConfig(2000, 100)));
 
             var executionMetric = await executor.Execute();
 

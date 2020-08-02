@@ -1,7 +1,0 @@
-{
-    "IsEncrypted": false,
-    "Values":{
-        "StorageConnectionString":"",
-        "ServiceBusConnectionString": ""
-    }
-}
