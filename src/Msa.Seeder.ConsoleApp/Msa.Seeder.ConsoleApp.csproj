@@ -5,6 +5,10 @@
     <ProjectReference Include="..\Msa.Seeder.Steps.Azure\Msa.Seeder.Steps.Azure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Net.NameResolution" Version="4.3.0" />
+  </ItemGroup>
+
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>

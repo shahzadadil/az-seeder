@@ -10,6 +10,7 @@
     using Msa.Seeder.Core.Configs;
     using System.Threading.Tasks;
     using System.Linq;
+    using System.IO;
 
     public class Program
     {
@@ -45,12 +46,30 @@
             var lastMessage = assetOpsEvents.Last();
             var rowKey = (DateTime.MaxValue.Ticks - lastMessage.EventDateTime.Ticks).ToString("d19");
 
+            // executor
+            //     .AddStep<PublishToTopicStep, PublishToTopicConfig>("Publish messages")
+            //     .WithConfig(new PublishToTopicConfig(
+            //         "",
+            //         "",
+            //         messages));
+
+            // The JSON files need to be saved somewhere and path need to be provided here
+            // It will build messages and send it to queue
+            var files = Directory.EnumerateFiles(@"path to files");
+            var queueMessages = files.Select(
+                f => new DelayedContent<String>(
+                    File.ReadAllText(f),
+                    null)).ToList();
+
+            // Specify the connection detaisl and queue name to which messages are to be sent
+            // A delay can also be provided between messages if required by passing a delay
+            // value above in the DelayedContent constructor
             executor
-                .AddStep<PublishToTopicStep, PublishToTopicConfig>("Publish messages")
-                .WithConfig(new PublishToTopicConfig(
-                    "",
-                    "",
-                    messages));
+                .AddStep<PublishToQueueStep, PublishToQueueConfig>("Publish to Queue")
+                .WithConfig(new PublishToQueueConfig(
+                    "queue-conn-string", 
+                    "queue-name",
+                    queueMessages));
 
             // executor
             //     .AddStep<CheckRowInTableStep, CheckRowInTableConfig>("Check record in Table Storage")

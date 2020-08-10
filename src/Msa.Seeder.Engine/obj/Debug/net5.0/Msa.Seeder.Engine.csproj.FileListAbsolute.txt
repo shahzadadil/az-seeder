@@ -12,3 +12,17 @@ D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Engine\obj\Debug\net5.0\Msa.Se
 D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Engine\obj\Debug\net5.0\Msa.Seeder.Engine.csproj.CopyComplete
 D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Engine\obj\Debug\net5.0\Msa.Seeder.Engine.dll
 D:\Projects\Azure Seeder\az-seeder\src\Msa.Seeder.Engine\obj\Debug\net5.0\Msa.Seeder.Engine.pdb
+G:\Projects\Seeder\az-seeder\src\Msa.Seeder.Engine\bin\Debug\net5.0\Msa.Seeder.Engine.deps.json
+G:\Projects\Seeder\az-seeder\src\Msa.Seeder.Engine\bin\Debug\net5.0\Msa.Seeder.Engine.dll
+G:\Projects\Seeder\az-seeder\src\Msa.Seeder.Engine\bin\Debug\net5.0\Msa.Seeder.Engine.pdb
+G:\Projects\Seeder\az-seeder\src\Msa.Seeder.Engine\bin\Debug\net5.0\Msa.Core.dll
+G:\Projects\Seeder\az-seeder\src\Msa.Seeder.Engine\bin\Debug\net5.0\Msa.Seeder.Core.dll
+G:\Projects\Seeder\az-seeder\src\Msa.Seeder.Engine\bin\Debug\net5.0\Msa.Seeder.Core.pdb
+G:\Projects\Seeder\az-seeder\src\Msa.Seeder.Engine\bin\Debug\net5.0\Msa.Core.pdb
+G:\Projects\Seeder\az-seeder\src\Msa.Seeder.Engine\obj\Debug\net5.0\Msa.Seeder.Engine.csprojAssemblyReference.cache
+G:\Projects\Seeder\az-seeder\src\Msa.Seeder.Engine\obj\Debug\net5.0\Msa.Seeder.Engine.AssemblyInfoInputs.cache
+G:\Projects\Seeder\az-seeder\src\Msa.Seeder.Engine\obj\Debug\net5.0\Msa.Seeder.Engine.AssemblyInfo.cs
+G:\Projects\Seeder\az-seeder\src\Msa.Seeder.Engine\obj\Debug\net5.0\Msa.Seeder.Engine.csproj.CoreCompileInputs.cache
+G:\Projects\Seeder\az-seeder\src\Msa.Seeder.Engine\obj\Debug\net5.0\Msa.Seeder.Engine.csproj.CopyComplete
+G:\Projects\Seeder\az-seeder\src\Msa.Seeder.Engine\obj\Debug\net5.0\Msa.Seeder.Engine.dll
+G:\Projects\Seeder\az-seeder\src\Msa.Seeder.Engine\obj\Debug\net5.0\Msa.Seeder.Engine.pdb

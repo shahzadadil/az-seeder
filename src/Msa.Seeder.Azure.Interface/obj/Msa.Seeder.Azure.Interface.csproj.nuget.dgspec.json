@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Seeder.Azure.Interface\\Msa.Seeder.Azure.Interface.csproj": {}
+    "G:\\Projects\\Seeder\\az-seeder\\src\\Msa.Seeder.Azure.Interface\\Msa.Seeder.Azure.Interface.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Core\\Msa.Core.csproj": {
+    "G:\\Projects\\Seeder\\az-seeder\\src\\Msa.Core\\Msa.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Core\\Msa.Core.csproj",
+        "projectUniqueName": "G:\\Projects\\Seeder\\az-seeder\\src\\Msa.Core\\Msa.Core.csproj",
         "projectName": "Msa.Core",
-        "projectPath": "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Core\\Msa.Core.csproj",
-        "packagesPath": "C:\\Users\\Shahzad\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Core\\obj\\",
+        "projectPath": "G:\\Projects\\Seeder\\az-seeder\\src\\Msa.Core\\Msa.Core.csproj",
+        "packagesPath": "C:\\Users\\shahzad.adil\\.nuget\\packages\\",
+        "outputPath": "G:\\Projects\\Seeder\\az-seeder\\src\\Msa.Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Shahzad\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\shahzad.adil\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -57,40 +50,33 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.6.20318.15\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.7.20366.6\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Seeder.Azure.Interface\\Msa.Seeder.Azure.Interface.csproj": {
+    "G:\\Projects\\Seeder\\az-seeder\\src\\Msa.Seeder.Azure.Interface\\Msa.Seeder.Azure.Interface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Seeder.Azure.Interface\\Msa.Seeder.Azure.Interface.csproj",
+        "projectUniqueName": "G:\\Projects\\Seeder\\az-seeder\\src\\Msa.Seeder.Azure.Interface\\Msa.Seeder.Azure.Interface.csproj",
         "projectName": "Msa.Seeder.Azure.Interface",
-        "projectPath": "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Seeder.Azure.Interface\\Msa.Seeder.Azure.Interface.csproj",
-        "packagesPath": "C:\\Users\\Shahzad\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Seeder.Azure.Interface\\obj\\",
+        "projectPath": "G:\\Projects\\Seeder\\az-seeder\\src\\Msa.Seeder.Azure.Interface\\Msa.Seeder.Azure.Interface.csproj",
+        "packagesPath": "C:\\Users\\shahzad.adil\\.nuget\\packages\\",
+        "outputPath": "G:\\Projects\\Seeder\\az-seeder\\src\\Msa.Seeder.Azure.Interface\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Shahzad\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\shahzad.adil\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "projectReferences": {
-              "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Seeder.Core\\Msa.Seeder.Core.csproj": {
-                "projectPath": "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Seeder.Core\\Msa.Seeder.Core.csproj"
+              "G:\\Projects\\Seeder\\az-seeder\\src\\Msa.Seeder.Core\\Msa.Seeder.Core.csproj": {
+                "projectPath": "G:\\Projects\\Seeder\\az-seeder\\src\\Msa.Seeder.Core\\Msa.Seeder.Core.csproj"
               }
             }
           }
@@ -128,40 +114,33 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.6.20318.15\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.7.20366.6\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Seeder.Core\\Msa.Seeder.Core.csproj": {
+    "G:\\Projects\\Seeder\\az-seeder\\src\\Msa.Seeder.Core\\Msa.Seeder.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Seeder.Core\\Msa.Seeder.Core.csproj",
+        "projectUniqueName": "G:\\Projects\\Seeder\\az-seeder\\src\\Msa.Seeder.Core\\Msa.Seeder.Core.csproj",
         "projectName": "Msa.Seeder.Core",
-        "projectPath": "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Seeder.Core\\Msa.Seeder.Core.csproj",
-        "packagesPath": "C:\\Users\\Shahzad\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Seeder.Core\\obj\\",
+        "projectPath": "G:\\Projects\\Seeder\\az-seeder\\src\\Msa.Seeder.Core\\Msa.Seeder.Core.csproj",
+        "packagesPath": "C:\\Users\\shahzad.adil\\.nuget\\packages\\",
+        "outputPath": "G:\\Projects\\Seeder\\az-seeder\\src\\Msa.Seeder.Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Shahzad\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\shahzad.adil\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "projectReferences": {
-              "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Core\\Msa.Core.csproj": {
-                "projectPath": "D:\\Projects\\Azure Seeder\\az-seeder\\src\\Msa.Core\\Msa.Core.csproj"
+              "G:\\Projects\\Seeder\\az-seeder\\src\\Msa.Core\\Msa.Core.csproj": {
+                "projectPath": "G:\\Projects\\Seeder\\az-seeder\\src\\Msa.Core\\Msa.Core.csproj"
               }
             }
           }
@@ -189,7 +168,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.6.20318.15\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.7.20366.6\\RuntimeIdentifierGraph.json"
         }
       }
     }
