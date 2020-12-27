@@ -6,12 +6,15 @@ namespace Msa.Seeder.Azure.Interface.ServiceBus
     using System.Text;
     using System.Threading;
     using System.Threading.Tasks;
+    using global::Azure.Messaging.ServiceBus;
     using Microsoft.Azure.ServiceBus;
     using Msa.Seeder.Core.Configs;
 
-    public class TopicAdapter : IDisposable
+    public class TopicAdapter
     {
-        private readonly TopicClient _TopicClient;
+        private readonly ServiceBusClient topicClient;
+        private readonly String _ConnectionString;
+        private readonly String _TopicName;
 
         public TopicAdapter(String topicName, String connectionString)
         {
@@ -25,7 +28,8 @@ namespace Msa.Seeder.Azure.Interface.ServiceBus
                 throw new ArgumentNullException(nameof(connectionString));
             }
 
-            this._TopicClient = new TopicClient(connectionString, topicName);
+            this._ConnectionString = connectionString;
+            this._TopicName = topicName;
         }        
 
         public async Task SendAtOnce(IEnumerable<DelayedContent<String>> messageContents)
@@ -40,54 +44,34 @@ namespace Msa.Seeder.Azure.Interface.ServiceBus
                 return;
             }
 
-            // var messageCount = messageContents.Count();
+            await using (var topicClient = new ServiceBusClient(this._ConnectionString))
+            {
+                var sender = this.topicClient.CreateSender(this._TopicName);
+                var topicMessages = messageContents.Select(msg => new ServiceBusMessage(msg.Content));
+                await sender.SendMessagesAsync(topicMessages);
+            }
+            
 
-            // if (messageCount == 1)
+            // foreach (var messageContent in messageContents)
             // {
-            //     await SendMessage(messageContents.ElementAt(0));
-            //     return;
-            // } 
+            //     if (String.IsNullOrWhiteSpace(messageContent.Content))
+            //     {
+            //         throw new ArgumentException(nameof(messageContent.Content));
+            //     }
 
-            // var lastMessage = messageContents.Last();
-            // messageContents.ToList().RemoveAt(messageCount - 1);
+            //     // Messages are sent synchronously by design, as we do not want to hold the processing
+            //     // var topicMessage = new Message(Encoding.UTF8.GetBytes(messageContent.Content));
+            //     var topicMessage = new Message(Encoding.UTF8.GetBytes("test"));
 
-            // Parallel.ForEach(
-            //     messageContents,
-            //     (msg) => SendMessage())
+            //     // if (messageContent.Delay.TotalMilliseconds > 0)
+            //     // {
+            //     //     var delay = Convert.ToInt32(Math.Floor(messageContent.Delay.TotalMilliseconds));
+            //     //     Thread.Sleep(delay);
+            //     // }
 
-            foreach (var messageContent in messageContents)
-            {
-                if (String.IsNullOrWhiteSpace(messageContent.Content))
-                {
-                    throw new ArgumentException(nameof(messageContent.Content));
-                }
-
-                // Messages are sent synchronously by design, as we do not want to hold the processing
-                var topicMessage = new Message(Encoding.UTF8.GetBytes(messageContent.Content));
-
-                if (messageContent.Delay.TotalMilliseconds > 0)
-                {
-                    var delay = Convert.ToInt32(Math.Floor(messageContent.Delay.TotalMilliseconds));
-                    Thread.Sleep(delay);
-                }
-
-                this._TopicClient.SendAsync(topicMessage);
-            }
-        }
-
-        private async Task SendMessage(String messageContent)
-        {
-            var topicMessage = new Message(Encoding.UTF8.GetBytes(messageContent));
-            await this._TopicClient.SendAsync(topicMessage);
-        }
-
-        public void Dispose()
-        {
-            if (this._TopicClient != null)
-            {
-                this._TopicClient.CloseAsync();
-            }
-        }
-        
+            //     sender.SendMessagesAsync
+            //     //await client.CloseAsync();
+            // }
+        }        
     }    
 }

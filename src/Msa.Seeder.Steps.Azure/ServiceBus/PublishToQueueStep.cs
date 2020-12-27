@@ -11,7 +11,7 @@ namespace Msa.Seeder.Steps.Azure.ServiceBus
         {
             var stepConfig = this._StepConfig;
 
-            using (var queueAdapter = new TopicAdapter(stepConfig.QueueName, stepConfig.ConnectionString))
+            using (var queueAdapter = new QueueAdapter(stepConfig.QueueName, stepConfig.ConnectionString))
             {
                 await queueAdapter.SendAtOnce(stepConfig.MessageContents);
             }

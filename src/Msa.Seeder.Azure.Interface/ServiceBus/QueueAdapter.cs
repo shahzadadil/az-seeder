@@ -73,13 +73,15 @@ namespace Msa.Seeder.Azure.Interface.ServiceBus
 
                 this._QueueClient.SendAsync(queueMessage);
             }
+
+            //await this._QueueClient.CloseAsync();
         }
 
         public void Dispose()
         {
             if (this._QueueClient != null)
             {
-                this._QueueClient.CloseAsync();
+                //this._QueueClient.CloseAsync();
             }
         }
         
