@@ -10,11 +10,8 @@ namespace Msa.Seeder.Steps.Azure.ServiceBus
         public override async Task Execute()
         {
             var stepConfig = this._StepConfig;
-
-            using (var queueAdapter = new QueueAdapter(stepConfig.QueueName, stepConfig.ConnectionString))
-            {
-                await queueAdapter.SendAtOnce(stepConfig.MessageContents);
-            }
+            var queueAdapter = new QueueAdapter(stepConfig.QueueName, stepConfig.ConnectionString);
+            await queueAdapter.SendAtOnce(stepConfig.MessageContents);
         }
     }
 }

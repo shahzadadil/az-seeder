@@ -3,11 +3,8 @@ namespace Msa.Seeder.Azure.Interface.ServiceBus
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
-    using System.Threading;
     using System.Threading.Tasks;
     using global::Azure.Messaging.ServiceBus;
-    using Microsoft.Azure.ServiceBus;
     using Msa.Seeder.Core.Configs;
 
     public class TopicAdapter
